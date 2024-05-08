@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let hours = currentDate.getHours();
   const minutes = currentDate.getMinutes();
   const timeOfDay = hours >= 12 ? "PM" : "AM";
-  hours = hours % 12;
-  hours = hours ? hours : 12; // Handle midnight
+  hours = hours === 0 ? 12 : hours; // Handle midnight
+  hours = hours > 12 ? hours - 12 : hours; // Handle afternoon and evening
   const currentTime =
     hours + ":" + (minutes < 10 ? "0" + minutes : minutes) + " " + timeOfDay;
 
@@ -114,14 +114,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set greeting
   let greetingText = "Good ";
-  if (hours < 12) {
+  if (hours >= 5 && hours < 12) {
     greetingText += "Morning";
   } else if (hours >= 12 && hours < 17) {
     greetingText += "Afternoon";
   } else {
     greetingText += "Evening";
   }
-  greetingText += " " + currentTime;
+  greetingText = currentTime;
 
   greeting.textContent = greetingText;
 
