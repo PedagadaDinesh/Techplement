@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+   <section class="container">
+        <div class="main-left">
+            <div class="location">
+                <div class="location-data">
+                   <img src="/images/location.png" alt="" class="location1">
+                   <h3 id="cityName" class="cityName"></h3>
+                </div>
+                <form action="">
+                    <input type="search" placeholder="Search City" aria-label="Search" class="input-field" id="city">
+                    <button type="submit" class="button" id="submit">Submit</button>
+                </form>
+            </div>
+           <div class="title">
+                <div class="message">
+                    <img src="/images/sun.png" alt="" class="image">
+                    <h1></h1>
+                </div>
+                <p></p>
+           </div>
+            <div class="card">
+                <div class="box">
+                    <p class="card-design">Temperature</p>
+                    <div class="card-info">
+                        <h1 id="temp"></h1>
+                        <p class="card-text">Temperature</p>
+                        <p class="card-text">Min Temperature :  <span id="min_temp"></span></p>
+                        <p class="card-text">Max Temperature : <span id="max_temp"></span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="card-design">Humidity Info</p>
+                    <div class="card-info">
+                        <h1 id="humidity"></h1>
+                        <p class="card-text">Humidity <span id="humidity"></span></p>
+                        <p class="card-text">Feels Like :<span id="feels_like"></span></p>
+                        <p class="card-text">Wind Degree : <span id="wind_degrees"></span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="card-design">Wind Info</p>
+                    <div class="card-info">
+                        <h1 id="wind_speed"></h1>
+                        <p class="card-text">Wind Speed <span id="wind_speed"></span></p>
+                        <p class="card-text">Sunrise Time : <span id="sunrise"></span></p>
+                        <p class="card-text">Sunset Time : <span id="sunset"></span></p>
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+        <div class="main-right">
+            <div class="right-details">
+                <div class="design1"></div>
+                <div class="design2"></div>
+                <div class="design3"></div>
+                <img src="/images/storm.png" alt="">
+                <p class="para">Today, 14 April</p>
+                <p class="heading" id="temperature">
+                </p>
+                <p class="para">Sunny</p>
+            </div>
+            <div class="right-info">
+                <div class="data">
+                    <p class="para">Wind</p>
+                    <img src="/images/wind.png" alt="" class="images">
+                    <p class=""> <span id="windspeed"></span></p>
+                </div>
+                <div class="data">
+                    <p class="para">Humidity</p>
+                    <img src="/images/humidity.png" alt="" class="images">
+                    <p class=""> <span id="humid"></span></p>
+                </div>
+
+            </div>
+        </div>
+   </section>
+    <script src="script.js"></script>
+</body>
+</html>
